@@ -1,0 +1,55 @@
+.app-wrapper{
+  display: grid;
+
+  grid-template-areas: /*постройка шаблонов для зон описывает для остальных*/
+  "h h"  /*h - первая колонка и h вторая колонка*/
+  "n c"; /*n - 2ая строка 1ая колонка и с 2ая колонка*/
+
+  grid-template-rows: 60px 1fr; /* 2 строки*/
+  grid-template-columns: 2fr 10fr; /*2 колонки* разделенные на фракции (части) всего 12 фракций */
+  /* grid-gap: 10px; */
+}
+  
+.header{
+  grid-area: h;
+  background-color: blue;
+}
+
+.header img{
+  width: 60px;
+  border-radius: 100px; /* Радиус скругления */
+  border: 3px solid green; /* Параметры рамки */
+  box-shadow: 0 0 7px #666; /* Параметры тени */
+}
+
+.nav{
+  grid-area: n;
+  background-color: aqua;
+}
+.nav div{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+/* .nav div.active{
+  background-color: #4CAF50;
+  color: white;
+} */
+.nav div:hover:not(.active){
+  background-color: #091638;
+  color: white;
+}
+.content{
+  grid-area: c;
+  background-color: darkorchid;
+}
+
+.content img{
+  width: 700px;
+  height: 400px;
+}
